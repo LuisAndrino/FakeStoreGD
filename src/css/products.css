@@ -1,0 +1,16 @@
+.main-products{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-gap: 10px;
+}
+
+.products{
+    width: 80%;
+    height: 80%;
+}
+
+.products img{
+    width: 100%;
+}

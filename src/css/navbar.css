@@ -1,0 +1,59 @@
+.navBar {
+    width: 80%;
+    height: 150px;
+    background-color: #ff9f1a;
+    border-radius: 15px;
+}
+
+.nav-imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner {
+    width: 45%;
+    height: 80px;
+    border-radius: 0 0 7px;
+}
+
+.Opiniones,
+.Membresias {
+    width: 15%;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu ul {
+    padding-top: 20px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-carrito{
+  width:  7%;
+  height: 80px;
+  background-color: #0078bb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
