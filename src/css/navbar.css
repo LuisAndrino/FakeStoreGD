@@ -3,6 +3,7 @@
     height: 150px;
     background-color: #ff9f1a;
     border-radius: 15px;
+    padding-bottom: 10px;
 }
 
 .nav-imagenes {
@@ -46,6 +47,23 @@
     align-items: center;
     list-style: none;
     color: #fff;
+}
+
+.nav-menu ul li {
+    display: flex;
+    width: 16%;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.nav-menu ul li svg {
+    margin-right: 6px;
+}
+
+.categorias{
+    background-color: #0078bb;
 }
 
 .nav-carrito{

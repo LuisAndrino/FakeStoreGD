@@ -24,7 +24,7 @@ const GetProducts = ( ) => {
     }, []);
     return (
         <>
-            <legend>{data.category}</legend>
+            <legend className="legend-item">{data.category}</legend>
             <h5>{data.title}</h5>
             <img src={data.image} alt={data.title} />
             <button>Buy Q{data.price}</button>

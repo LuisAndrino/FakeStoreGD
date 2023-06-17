@@ -54,4 +54,25 @@
     cursor: pointer;
 }
 
+.products button:active{
+    background-color: #005c8a;
+}
+
+.products button:hover{
+    background-color: #005c8a;
+}
+
+.products h5{
+    padding: 0 20px;
+}
+
+.legend-item{
+    width: 50%;
+    border: 2px solid rgb(255, 159, 26);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
 
