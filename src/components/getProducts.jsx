@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 
-const GetProducts = ({ number }) => {
+const GetProducts = ( ) => {
     const [data, setData] = useState([]);
     const API = "https://fakestoreapi.com/products/";
+    const randomNum = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
 
     useEffect(() => {
         const getProducts = async (URL, id) => {
@@ -10,21 +13,21 @@ const GetProducts = ({ number }) => {
                 const response = await fetch(`${URL}${id}`);
                 const data = await response.json();
                 setData(data);
-                console.log(data);
             } catch (error) {
                 console.log(error);
             }
         };
 
         (async () => {
-            await getProducts(API, number);
+            await getProducts(API, randomNum(1, 20));
         })();
     }, []);
     return (
         <>
-            <h4>{data.title}</h4>
+            <legend>{data.category}</legend>
+            <h5>{data.title}</h5>
             <img src={data.image} alt={data.title} />
-            <p>{data.description}</p>
+            <button>Buy Q{data.price}</button>
         </>
     );
 };

@@ -4,35 +4,38 @@ import "../css/products.css";
 
 const Products = () => {
     return (
-        <div className="main-products">
+        <div className="main-div">
+        <fieldset className="main-products">
+        <legend className="legend">Sale</legend>
             <div className="products">
-                <GetProducts number={1} />
+                <GetProducts />
             </div>
             <div className="products">
-                <GetProducts number={2} />
+                <GetProducts />
             </div>
             <div className="products">
-                <GetProducts number={3} />
+                <GetProducts />
             </div>
             <div className="products">
-                <GetProducts number={4} />
+                <GetProducts />
             </div>
 
             <div className="products">
-                <GetProducts number={5} />
+                <GetProducts />
                 </div>
             <div className="products">
-                <GetProducts number={6} />
+                <GetProducts />
         </div>
             <div className="products">
-                <GetProducts number={7} />
+                <GetProducts />
         </div>
             <div className="products">
-                <GetProducts number={8} />
+                <GetProducts />
         </div>
             <div className="products">
-                <GetProducts number={9} />
+                <GetProducts />
         </div>
+        </fieldset>
         </div>
     );
 };
