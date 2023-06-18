@@ -76,3 +76,53 @@
 }
 
 
+.product-description{
+    width: 30%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 159, 26);
+    padding: 20px;
+}
+
+.product-description img{
+    width: 100px;
+    height: 100px;
+}
+
+.product-description button{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0078bb;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-description button:active{
+    background-color: #005c8a;
+}
+
+.product-description button:hover{
+    background-color: #005c8a;
+}
+
+.product-description svg{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
