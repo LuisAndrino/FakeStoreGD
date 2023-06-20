@@ -21,7 +21,7 @@ const Footer = () => {
                 <li className="footer-li"> <AiFillFlag/> Boletin</li>
                 <li className="footer-li"> <FaNewspaper/> Registra tu experiencia</li>
             </ul>
-            <p className="footer-p">© Esta pagina es de prueba</p>
+            <p className="footer-p">© This page is just a project</p>
         </footer>
     )
 }

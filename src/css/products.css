@@ -78,10 +78,9 @@
 
 .product-description{
     width: 30%;
-    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 50%;
@@ -92,6 +91,7 @@
     border-radius: 10px;
     border: 2px solid rgb(255, 159, 26);
     padding: 20px;
+    text-overflow: ellipsis;
 }
 
 .product-description img{
@@ -110,6 +110,7 @@
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .product-description button:active{
@@ -126,3 +127,9 @@
     right: 10px;
     cursor: pointer;
 }
+
+.product-description h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
