@@ -5,8 +5,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { BsEnvelope } from "react-icons/bs";
 import { BiShoppingBag } from "react-icons/bi";
 import { HiUserGroup } from "react-icons/hi";
+import { useState } from "react";
 
 const NavBar = () => {
+    const [showCart, setShowCart] = useState(false);
     const grCartStyles = { color: "white", fontSize: "1.8em", fill: "white" };
     return (
         <nav className="navBar">
@@ -27,7 +29,11 @@ const NavBar = () => {
                     alt="Opiniones"
                 />
                 <div className="nav-carrito">
-                    <GrCart style={grCartStyles} className="nav-carrito-img" />
+                    <GrCart
+                        style={grCartStyles}
+                        onClick={() => setShowCart(!showCart)}
+                        className="nav-carrito-img"
+                    />
                 </div>
             </section>
             <section className="nav-menu">
