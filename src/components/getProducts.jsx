@@ -1,25 +1,27 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { AiFillCloseCircle } from "react-icons/ai";
 import Loading from "./loading";
+import ModalPortal from "./modalPortal";
 
 const GetProducts = () => {
     const [data, setData] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    const [isThereAModal, setIsThereAModal] = useState(false);
     const API = "https://fakestoreapi.com/products/";
     const randomNum = (min, max) => {
         return Math.floor(Math.random() * (max - min) + min);
     };
 
     const enableModal = () => {
-        if (!showModal) {
-            setShowModal(true);
-            let modal = document.querySelectorAll(".product-description");
-            for (let i = 0; i < modal.length; i++) {
-                modal[i].style.display = "none";
-            }
+        if(!isThereAModal){ 
+        setShowModal(true);
+        setIsThereAModal(true);
+        } else {
+            setShowModal(false);
+            setIsThereAModal(false);
         }
+        
     };
 
     useEffect(() => {
@@ -53,16 +55,7 @@ const GetProducts = () => {
             <button onClick={enableModal}>Product Description</button>
             {showModal &&
                 createPortal(
-                    <div className="product-description">
-                        <h3>{data.title}</h3>
-                        <AiFillCloseCircle
-                            onClick={() => setShowModal(false)}
-                        />
-                        <img src={data.image} alt={data.title} />
-                        <p>{data.description}</p>
-                        <button>Add to cart Q{data.price}</button>
-                    </div>,
-
+                    <ModalPortal data={data} setShowModal={setShowModal} />,
                     document.body
                 )}
         </>

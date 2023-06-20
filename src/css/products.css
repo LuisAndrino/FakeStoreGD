@@ -133,3 +133,6 @@
     margin-bottom: 10px;
 }
 
+.show-modal{
+    display: none;
+}
