@@ -1,6 +1,6 @@
 .main-products{
     margin-top: 20px;
-    width: 97%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -79,6 +79,7 @@
 
 .product-description{
     width: 40%;
+    overflow: auto;
     height: 500px;
     display: flex;
     flex-direction: column;

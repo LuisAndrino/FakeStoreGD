@@ -1,14 +1,6 @@
 import { AiFillCloseCircle } from "react-icons/ai";
-import Cart from "./cart";
-import { createPortal } from "react-dom";
-import { useState } from "react";
 
 const ModalPortal = ({ data, setShowModal }) => {
-    const [enableCart, setEnableCart] = useState(false);
-    const enableModal = () => {
-        <Cart data={data} />;
-        setEnableCart(!enableCart);
-    };
 
     return (
         <div className="product-description">
@@ -18,8 +10,7 @@ const ModalPortal = ({ data, setShowModal }) => {
             <p>
                 <b>Description: </b> <i>{data.description}</i>
             </p>
-            <button onClick={enableModal}>Add to cart Q{data.price}</button>
-            {enableCart && createPortal(<Cart data={data} />, document.body)}
+            <button>Add to cart Q{data.price}</button>
         </div>
     );
 };
